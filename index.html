@@ -1,0 +1,47 @@
+<!doctype html>
+<html>
+<head>
+  <meta charset="utf-8"/>
+  <title>移动端优化后的canvans画圆</title> 
+  <style>
+    ul, ul li {
+        margin: 0;
+        padding: 0;
+    }
+    ul li {
+       float: left;
+       width: 100px;
+       list-style: none;
+    }
+    .myCanvas {
+        width: 4.4rem;
+        height: 4.4rem;
+    }
+  </style>
+<script src="./script/sea.js"></script>
+</head>
+<body>
+    <ul>
+      <li>       
+          <canvas class="myCanvas" width="200" height="200"></canvas>
+      </li>
+      <li>
+          <canvas class="myCanvas" width="200" height="200"></canvas>
+      </li>
+      <li>
+          <canvas class="myCanvas" width="200" height="200"></canvas>
+      </li>
+    </ul> 
+    
+    <script>      
+        seajs.config({
+            alias: {
+                "$": "./jquery.js"
+            }
+        });
+
+        // 加载入口模块
+        seajs.use("./script/main");
+    </script>
+</body>
+</html>
