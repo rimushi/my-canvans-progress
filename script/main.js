@@ -5,7 +5,12 @@ define(function(require, exports, module){
     module.exports = {
         init: function() { 
 	        var self = this;
-            self.drawList(); 
+            var list = '<li><canvas class="myCanvas" width="200" height="200"></canvas></li>'+
+                       '<li><canvas class="myCanvas" width="200" height="200"></canvas></li>'+
+                       '<li><canvas class="myCanvas" width="200" height="200"></canvas></li>';
+            var template = Handlebars.compile(list);
+            $("#J_list").html(template());
+            self.drawList();
         },   
         drawList: function() {
             var self = this;   
